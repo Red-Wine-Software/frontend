@@ -1,0 +1,14 @@
+kind: LocalConfig
+apiversion: odo.openshift.io/v1alpha1
+ComponentSettings:
+  Type: nodejs:12
+  SourceLocation: ./
+  SourceType: local
+  Ports:
+  - 3000/TCP
+  Application: rewine-frontend
+  Project: rewine-react
+  Name: rewine-frontend
+  Url:
+  - Name: rewine-route
+    Port: 3000
