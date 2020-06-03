@@ -1,9 +1,10 @@
-# web-nodejs-sample
+# ReWine React App
 
-ExpressJS Sample Application
+React Application for ReWine e-commerce
 
 # Developer Workspace
-[![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?id=r8et9w6vohmqvro8)
+
+[![Contribute](https://raw.githubusercontent.com/blues-man/cloud-native-workshop/demo/factory-contribute.svg)](https://codeready-workspaces.apps.cluster-nantes-715e.nantes-715e.example.opentlc.com/factory?url=https://github.com/Red-Wine-Software/frontend/)
 
 # Stack to use
 
