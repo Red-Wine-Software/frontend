@@ -7,7 +7,7 @@ class Wine extends Component {
   }
 
   componentDidMount() {
-    return fetch("https://backend-rewine-rewine-backend.apps.cluster-nantes-715e.nantes-715e.example.opentlc.com/rewine/backend/wines")
+    return fetch(`${process.env.REACT_APP_BACKEND_URL}/rewine/backend/wines`)
            .then(resp => resp.json())
            .then(backend => {
                 console.log(backend);
