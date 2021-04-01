@@ -1,11 +1,11 @@
 metadata:
-  name: wksp-nodejs-react
+  name: rewine-frontend
 projects:
-  - name: react-rewine
+  - name: rewine-backend
     source:
       location: 'https://github.com/Red-Wine-Software/frontend.git'
       type: git
-      branch: master
+      branch: summit2021
 components:
   - id: che-incubator/typescript/latest
     memoryLimit: 512Mi
@@ -22,19 +22,19 @@ apiVersion: 1.0.0
 commands:
   - name: download dependencies
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/react-rewine/front-end'
+      - workdir: '${CHE_PROJECTS_ROOT}/rewine-frontend'
         type: exec
         command: npm install
         component: nodejs
   - name: run the web app
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/react-rewine/front-end'
+      - workdir: '${CHE_PROJECTS_ROOT}/rewine-frontend'
         type: exec
-        command: nodemon app.js
+        command: npm start
         component: nodejs
   - name: run the web app (debugging enabled)
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/react-rewine/front-end'
+      - workdir: '${CHE_PROJECTS_ROOT}/rewine-frontend'
         type: exec
         command: nodemon --inspect app.js
         component: nodejs
