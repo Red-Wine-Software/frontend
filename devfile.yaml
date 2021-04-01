@@ -1,7 +1,7 @@
 metadata:
   name: rewine-frontend-
 projects:
-  - name: rewine-backend
+  - name: rewine-frontend
     source:
       location: 'https://github.com/Red-Wine-Software/frontend.git'
       type: git
