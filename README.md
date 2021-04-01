@@ -1,3 +1,18 @@
+# ReWine React App
+
+React Application for ReWine e-commerce
+
+## Developer Workspace
+
+[![Contribute](https://raw.githubusercontent.com/blues-man/cloud-native-workshop/demo/factory-contribute.svg)](https://codeready-workspaces.apps.cluster-nantes-715e.nantes-715e.example.opentlc.com/factory?url=https://github.com/Red-Wine-Software/frontend/)
+
+## Run on OpenShift
+
+
+```
+oc new-app quay.io/evanshortiss/s2i-nodejs-nginx~https://github.com/Red-Wine-Software/frontend.git#rhsummit2021 --build-env BUILD_OUTPUT_DIR=build --build-env REACT_APP_BACKEND_URL=<backend url>
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
