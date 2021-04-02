@@ -14,7 +14,7 @@ components:
     endpoints:
       - name: nodejs
         port: 3000
-    memoryLimit: 512Mi
+    memoryLimit: 1024Mi
     type: dockerimage
     image: 'quay.io/eclipse/che-nodejs10-ubi:7.13.2'
     alias: nodejs
