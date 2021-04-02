@@ -4,7 +4,7 @@ React Application for ReWine e-commerce
 
 ## Developer Workspace
 
-[![Contribute](https://raw.githubusercontent.com/blues-man/cloud-native-workshop/demo/factory-contribute.svg)](https://codeready-workspaces.apps.cluster-nantes-715e.nantes-715e.example.opentlc.com/factory?url=https://github.com/Red-Wine-Software/frontend/)
+[![Contribute](https://raw.githubusercontent.com/blues-man/cloud-native-workshop/demo/factory-contribute.svg)](https://codeready-workspaces.apps.cluster-3f20.3f20.sandbox106.opentlc.com/factory?url=https://github.com/Red-Wine-Software/frontend/)
 
 ## Run on OpenShift
 
