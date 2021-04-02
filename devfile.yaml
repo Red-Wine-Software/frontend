@@ -20,7 +20,7 @@ components:
     alias: nodejs
     env:
       - name: REACT_APP_BACKEND_URL
-        value: https://backend-red-wine-software.apps.cluster-3f20.3f20.sandbox106.opentlc.com/rewine/backend/wines
+        value: https://backend-red-wine-software.apps.cluster-3f20.3f20.sandbox106.opentlc.com
 apiVersion: 1.0.0
 commands:
   - name: download dependencies
