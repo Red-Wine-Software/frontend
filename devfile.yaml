@@ -1,7 +1,7 @@
 metadata:
-  name: rewine-frontend
+  name: rewine-frontend-
 projects:
-  - name: rewine-backend
+  - name: rewine-frontend
     source:
       location: 'https://github.com/Red-Wine-Software/frontend.git'
       type: git
@@ -18,6 +18,9 @@ components:
     type: dockerimage
     image: 'quay.io/eclipse/che-nodejs10-ubi:7.13.2'
     alias: nodejs
+    env:
+      - name: REACT_APP_BACKEND_URL
+        value: https://backend-red-wine-software.apps.cluster-3f20.3f20.sandbox106.opentlc.com/rewine/backend/wines
 apiVersion: 1.0.0
 commands:
   - name: download dependencies
