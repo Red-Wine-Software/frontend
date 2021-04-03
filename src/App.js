@@ -379,6 +379,7 @@ class App extends React.Component {
             >
 
               <CardTitle>{product.name}</CardTitle>
+              <CardHeader><img src={product.imageURL} alt={product.name}/></CardHeader>
               <CardBody>{product.origin}</CardBody>
 
             </Card>
