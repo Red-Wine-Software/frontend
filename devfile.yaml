@@ -1,3 +1,4 @@
+apiVersion: 1.0.0
 metadata:
   name: rewine-frontend
 projects:
@@ -7,21 +8,23 @@ projects:
       type: git
       branch: summit2021
 components:
-  - id: che-incubator/typescript/latest
-    memoryLimit: 512Mi
-    type: chePlugin
   - mountSources: true
     endpoints:
       - name: nodejs
         port: 3000
     memoryLimit: 1024Mi
     type: dockerimage
-    image: 'quay.io/eclipse/che-nodejs10-ubi:7.13.2'
     alias: nodejs
+    image: 'quay.io/eclipse/che-nodejs10-ubi:7.13.2'
     env:
-      - name: REACT_APP_BACKEND_URL
-        value: https://backend-red-wine-software.apps.cluster-3f20.3f20.sandbox106.opentlc.com
-apiVersion: 1.0.0
+      - value: 'https://backend-red-wine-store.apps.axa.w6gk.p1.openshiftapps.com/'
+        name: REACT_APP_BACKEND_URL
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: vscode/typescript-language-features/latest
+    type: chePlugin
+  - id: redhat/vscode-xml/latest
+    type: chePlugin
 commands:
   - name: download dependencies
     actions:
@@ -44,11 +47,7 @@ commands:
   - name: stop the web app
     actions:
       - type: exec
-        command: >-
-          node_server_pids=$(pgrep -fx '.*nodemon (--inspect )?app.js' | tr
-          "\\n" " ") && echo "Stopping node server with PIDs:
-          ${node_server_pids}" &&  kill -15 ${node_server_pids} &>/dev/null &&
-          echo 'Done.'
+        command: 'node_server_pids=$(pgrep -fx ''.*nodemon (--inspect )?app.js'' | tr "\\n" " ") && echo "Stopping node server with PIDs: ${node_server_pids}" &&  kill -15 ${node_server_pids} &>/dev/null && echo ''Done.'''
         component: nodejs
   - name: Attach remote debugger
     actions:
